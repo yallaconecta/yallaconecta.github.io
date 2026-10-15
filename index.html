@@ -913,7 +913,7 @@
         .yc-cert-frame:hover{transform:rotate(0deg) scale(1.03)}
         .yc-cert-img{width:100%;height:auto;display:block;border-radius:2px}
         </style>
-        <a href="parceria-institucional.webp" target="_blank" rel="noopener" class="yc-cert-frame" aria-label="Ver certificado de parceria institucional em tamanho maior">
+        <a href="parceria-institucional.webp" onclick="return ycOpenCert(event)" class="yc-cert-frame" aria-label="Ver certificado de parceria institucional em tamanho maior">
           <img src="parceria-institucional.webp"
                alt="Certificado de Parceria Institucional entre o Institut du Monde Arabe (Paris) e a YallaConecta (Curitiba), assinado por Mohamad Ayham Kanjo"
                loading="lazy"
@@ -1429,5 +1429,49 @@ if ('serviceWorker' in navigator) {
   });
 }
 </script>
+
+<!-- CERT MODAL -->
+<style>
+  .yc-cert-modal{position:fixed;inset:0;z-index:100;background:rgba(10,58,60,0.92);display:none;align-items:center;justify-content:center;padding:20px;animation:ycFadeIn .25s ease-out}
+  .yc-cert-modal.open{display:flex}
+  .yc-cert-modal__inner{position:relative;max-width:min(1100px,96vw);max-height:94vh;display:flex;align-items:center;justify-content:center}
+  .yc-cert-modal__img{max-width:100%;max-height:94vh;width:auto;height:auto;border-radius:8px;box-shadow:0 24px 64px -16px rgba(0,0,0,.6);display:block}
+  .yc-cert-modal__close{position:absolute;top:-18px;right:-18px;width:44px;height:44px;border-radius:50%;background:#fff;color:#0A3A3C;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.35);transition:transform .18s ease,background .18s ease}
+  .yc-cert-modal__close:hover{background:#C99A2E;color:#fff;transform:scale(1.08)}
+  .yc-cert-modal__close:focus{outline:3px solid #C99A2E;outline-offset:2px}
+  @media (max-width:640px){.yc-cert-modal__close{top:8px;right:8px}}
+  @keyframes ycFadeIn{from{opacity:0}to{opacity:1}}
+  body.yc-modal-open{overflow:hidden}
+</style>
+<div id="ycCertModal" class="yc-cert-modal" role="dialog" aria-modal="true" aria-label="Certificado de Parceria Institucional ampliado">
+  <div class="yc-cert-modal__inner">
+    <button type="button" class="yc-cert-modal__close" onclick="ycCloseCert()" aria-label="Fechar certificado">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <img src="parceria-institucional.webp" alt="Certificado de Parceria Institucional YallaConecta x Institut du Monde Arabe" class="yc-cert-modal__img">
+  </div>
+</div>
+<script>
+  (function(){
+    var modal = document.getElementById('ycCertModal');
+    window.ycOpenCert = function(e){
+      if(e) e.preventDefault();
+      modal.classList.add('open');
+      document.body.classList.add('yc-modal-open');
+      return false;
+    };
+    window.ycCloseCert = function(){
+      modal.classList.remove('open');
+      document.body.classList.remove('yc-modal-open');
+    };
+    modal.addEventListener('click', function(e){
+      if(e.target === modal) window.ycCloseCert();
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && modal.classList.contains('open')) window.ycCloseCert();
+    });
+  })();
+</script>
+
 </body>
 </html>
