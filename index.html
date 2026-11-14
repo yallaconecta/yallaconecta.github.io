@@ -77,8 +77,8 @@ html[dir="rtl"] .btn{font-family:var(--f-ar)}
 .btn-dark:hover{background:var(--petrol-2)}
 .btn-ghost{border-color:var(--hair);background:transparent;color:var(--petrol)}
 .btn-ghost:hover{border-color:var(--petrol)}
-.sec-dark .btn-ghost{border-color:rgba(255,255,255,.3);color:#E6F0EF}
-.sec-dark .btn-ghost:hover{border-color:#fff}
+.sec-dark .btn-ghost,.hero .btn-ghost{border-color:rgba(255,255,255,.32);color:#E6F0EF}
+.sec-dark .btn-ghost:hover,.hero .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.07)}
 .topbar{background:var(--petrol-2);color:#9FBAB8;font-size:12.5px;letter-spacing:.02em;padding:9px 0}
 .topbar .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;align-items:center}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:rgba(250,247,241,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--hair)}
@@ -546,6 +546,12 @@ function setLang(l){
     var t = ar ? el.getAttribute('data-ar') : el.getAttribute('data-pt');
     if(t) el.textContent = t;
   });
+  document.title = ar ? 'ترجمة محلّفة ومعتمدة عربي–برتغالي في البرازيل | يلا كونيكتا'
+                      : 'Tradução Juramentada Árabe em Curitiba | YallaConecta';
+  var md = document.querySelector('meta[name="description"]');
+  if(md) md.setAttribute('content', ar
+    ? 'ترجمة محلّفة ومعتمدة من العربية إلى البرتغالية وبالعكس في البرازيل: السجل العدلي، شهادات الأحوال المدنية، الشهادات الجامعية، العقود وملصقات التصدير. خدمتك بالعربي من أول رسالة إلى التسليم.'
+    : 'Tradução juramentada e certificada árabe–português em Curitiba, Itapoá, Joinville e São Paulo. Certidões, antecedentes criminais, diplomas, contratos e rótulos para exportação.');
   document.getElementById('b-pt').className = ar ? '' : 'on';
   document.getElementById('b-ar').className = ar ? 'on' : '';
   try{ localStorage.setItem('yc-lang', l); }catch(e){}
