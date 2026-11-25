@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مقالات الترجمة القانونية - YallaConecta</title>
+  <meta name="description" content="مقالات متخصصة في الترجمة القانونية بين البرتغالية والعربية - بقلم فريق يلا كونيكتا، مدير YallaConecta">
+  <meta name="author" content="YallaConecta">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="مقالات الترجمة القانونية - YallaConecta">
+  <meta property="og:description" content="سلسلة مقالات في الدقة المصطلحية للترجمة القانونية بين البرتغالية والعربية">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yallaconecta.com/artigos/">
+  <meta property="og:locale" content="ar_SA">
+  <link rel="canonical" href="https://yallaconecta.com/artigos/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Serif+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal-dark: #0A3A3C;
+      --teal: #10666B;
+      --teal-light: #1B8A91;
+      --gold: #C99A2E;
+      --gold-light: #E8B84B;
+      --cream: #FAF8F4;
+      --warm-white: #FFFFFF;
+      --text-dark: #1C1917;
+      --text-mid: #44403C;
+      --text-light: #78716C;
+      --border: #E7E5E4;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Naskh Arabic', 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.8;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      background: var(--teal-dark);
+      padding: 0 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .logo-ar {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0;
+    }
+
+    .logo-pt {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .header-nav a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: color 0.2s;
+      letter-spacing: 0.05em;
+    }
+
+    .header-nav a:hover { color: var(--gold); }
+
+    .header-nav .btn-site {
+      background: var(--gold);
+      color: var(--teal-dark);
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .header-nav .btn-site:hover {
+      background: var(--gold-light);
+      color: var(--teal-dark);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(160deg, var(--teal-dark) 0%, var(--teal) 60%, #0F5559 100%);
+      padding: 5rem 1.5rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(201,154,46,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.03) 0%, transparent 50%);
+    }
+
+    .hero::after {
+      content: 'YallaConecta';
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-size: 8rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.03);
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border: 1px solid rgba(201,154,46,0.4);
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title-ar {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.4;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-title-pt {
+      font-family: 'Noto Serif Display', serif;
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      font-weight: 400;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.03em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-divider {
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 1.5rem auto;
+      border: none;
+    }
+
+    .hero-desc {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.9;
+    }
+
+    /* ===== ARTICLES GRID ===== */
+    .articles-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section-title-ar {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--teal-dark);
+    }
+
+    .section-count {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--text-light);
+      letter-spacing: 0.1em;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .article-card {
+      background: var(--warm-white);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(10,58,60,0.12);
+      border-color: var(--teal-light);
+    }
+
+    .card-top {
+      background: var(--teal-dark);
+      padding: 1.4rem 1.5rem;
+      position: relative;
+    }
+
+    .card-num {
+      position: absolute;
+      top: 1rem;
+      left: 1.2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      margin-bottom: 0.8rem;
+    }
+
+    .tag-ar { background: rgba(201,154,46,0.2); color: var(--gold-light); }
+    .tag-bi { background: rgba(27,138,145,0.3); color: #7EE8EF; }
+
+    .card-title-ar {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.6;
+    }
+
+    .card-body {
+      padding: 1.4rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .card-title-pt {
+      font-family: 'Noto Serif Display', serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      border-right: 3px solid var(--gold);
+      padding-right: 0.75rem;
+    }
+
+    .card-excerpt-ar {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.8;
+      flex: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      padding-top: 0.8rem;
+      margin-top: auto;
+    }
+
+    .card-read-ar {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--teal);
+    }
+
+    .card-arrow {
+      color: var(--gold);
+      font-size: 1.1rem;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: var(--teal-dark);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    .cta-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cta-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .cta-title-ar {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-title-pt {
+      font-family: 'Noto Serif Display', serif;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 2rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--teal-dark);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.9rem 2.5rem;
+      border-radius: 6px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .cta-btn:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: #071E1F;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .footer-brand {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: rgba(255,255,255,0.8); }
+
+    .footer-copy {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .header-nav .nav-link { display: none; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .hero { padding: 3.5rem 1rem 3rem; }
+      .section-header { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"مقالات الترجمة القانونية - YallaConecta","description":"Artigos especializados em tradução juramentada árabe-português por Equipe YallaConecta","url":"https://yallaconecta.com/artigos/","inLanguage":["ar","pt-BR"],"author":{"@type":"Organization","name":"YallaConecta","url":"https://yallaconecta.com/"},"publisher":{"@type":"Organization","name":"YallaConecta","url":"https://yallaconecta.com","logo":"https://yallaconecta.com/og.png"},"hasPart":[{"@type":"Article","name":"كيف نترجم مصطلح «Diligências» من البرتغالية إلى العربية","url":"https://yallaconecta.com/artigos/artigo-1.html","inLanguage":"ar"},{"@type":"Article","name":"الفوارق في الترجمة القانونية بين البرتغالية والعربية","url":"https://yallaconecta.com/artigos/artigo-2.html","inLanguage":"ar"},{"@type":"Article","name":"الركائز الخمس للترجمة المحلّفة بين العربية والبرتغالية","url":"https://yallaconecta.com/artigos/artigo-3.html","inLanguage":"ar","workTranslation":{"@type":"Article","name":"Os 5 Pilares da Tradução Juramentada","inLanguage":"pt-BR"}},{"@type":"Article","name":"الخطر الخفي في العقود بين العربية والبرتغالية","url":"https://yallaconecta.com/artigos/artigo-4.html","inLanguage":"ar"},{"@type":"Article","name":"الحلال واللغة: كيف تحمي البطاقة العربية الصادرات البرازيلية","url":"https://yallaconecta.com/artigos/artigo-5.html","inLanguage":"ar"},{"@type":"Article","name":"الذكاء الاصطناعي وترجمة العقود: أين يُخطئ الخوارزم","url":"https://yallaconecta.com/artigos/artigo-6.html","inLanguage":"ar"}]}</script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-group">
+        <span class="logo-ar">يلّا كونيكتا</span>
+        <span class="logo-pt">YallaConecta</span>
+      </div>
+      <nav class="header-nav">
+        <a href="https://yallaconecta.com" class="nav-link">Site Principal</a>
+        <a href="https://yallaconecta.com/#servicos" class="nav-link">Serviços</a>
+        <a href="https://yallaconecta.com" class="btn-site">Solicitar Orçamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" role="banner">
+    <div class="hero-inner">
+      <span class="hero-label">YallaConecta - Hub Editorial</span>
+      <h1 class="hero-title-ar">مقالات الترجمة القانونية</h1>
+      <p class="hero-title-pt">Artigos de Autoridade em Tradução Juramentada Árabe-Português</p>
+      <hr class="hero-divider">
+      <p class="hero-desc">
+        سلسلة مقالات متخصصة في الدقة المصطلحية والترجمة القانونية بين البرتغالية والعربية -
+        بقلم فريق يلا كونيكتا، مدير YallaConecta
+      </p>
+    </div>
+  </section>
+
+  <!-- ARTICLES -->
+  <main class="articles-section" id="artigos">
+    <div class="section-header">
+      <h2 class="section-title-ar">المقالات المتاحة</h2>
+      <span class="section-count">6 ARTIGOS PUBLICADOS</span>
+    </div>
+
+    <div class="articles-grid">
+
+      <!-- Artigo 1 -->
+      <a class="article-card" href="artigo-1.html">
+        <div class="card-top">
+          <span class="card-num">01</span>
+          <span class="card-tag tag-ar">عربي - Árabe</span>
+          <h3 class="card-title-ar">كيف نترجم مصطلح «Diligências» من البرتغالية إلى العربية</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-title-pt">Série Terminológica 01 - Diligências Jurídicas</p>
+          <p class="card-excerpt-ar">
+            تحليل معمق لمصطلح «Diligências» البرتغالي وتعدد معانيه حسب السياق القانوني - الأعمال الإجرائية، الوثائق، المساعي الرسمية.
+          </p>
+          <div class="card-footer">
+            <span class="card-read-ar">اقرأ المقال</span>
+            <span class="card-arrow">←</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Artigo 2 -->
+      <a class="article-card" href="artigo-2.html">
+        <div class="card-top">
+          <span class="card-num">02</span>
+          <span class="card-tag tag-ar">عربي - Árabe</span>
+          <h3 class="card-title-ar">الفوارق في الترجمة القانونية بين البرتغالية والعربية</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-title-pt">Série Terminológica 02 - Divergências Jurídicas</p>
+          <p class="card-excerpt-ar">
+            استكشاف الفوارق الجوهرية بين المنظومتين القانونيتين البرتغالية والعربية وأثرها على دقة الترجمة.
+          </p>
+          <div class="card-footer">
+            <span class="card-read-ar">اقرأ المقال</span>
+            <span class="card-arrow">←</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Artigo 3 -->
+      <a class="article-card" href="artigo-3.html">
+        <div class="card-top">
+          <span class="card-num">03</span>
+          <span class="card-tag tag-bi">ثنائي اللغة - Bilíngue</span>
+          <h3 class="card-title-ar">الركائز الخمس للترجمة المحلّفة بين العربية والبرتغالية</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-title-pt">Os 5 Pilares da Tradução Juramentada</p>
+          <p class="card-excerpt-ar">
+            المبادئ الخمسة الأساسية التي تميز الترجمة القانونية المحترفة عن الترجمة العادية - متاح بالعربية والبرتغالية.
+          </p>
+          <div class="card-footer">
+            <span class="card-read-ar">اقرأ المقال - AR / PT</span>
+            <span class="card-arrow">←</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Artigo 4 -->
+      <a class="article-card" href="artigo-4.html">
+        <div class="card-top">
+          <span class="card-num">04</span>
+          <span class="card-tag tag-ar">عربي - Árabe</span>
+          <h3 class="card-title-ar">الخطر الخفي في العقود بين العربية والبرتغالية</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-title-pt">O Risco Oculto nos Contratos Bilíngues</p>
+          <p class="card-excerpt-ar">
+            لماذا ترجمة عقد دولي بمليون دولار لمترجم غير متخصص تعرضه للبطلان - قراءة في المخاطر القانونية الخفية.
+          </p>
+          <div class="card-footer">
+            <span class="card-read-ar">اقرأ المقال</span>
+            <span class="card-arrow">←</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Artigo 5 -->
+      <a class="article-card" href="artigo-5.html">
+        <div class="card-top">
+          <span class="card-num">05</span>
+          <span class="card-tag tag-ar">عربي - Árabe</span>
+          <h3 class="card-title-ar">الحلال واللغة: كيف تحمي البطاقة العربية الصادرات البرازيلية</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-title-pt">Halal e Linguagem - Exportações Alimentares ao Mundo Árabe</p>
+          <p class="card-excerpt-ar">
+            العلاقة الوثيقة بين الدقة اللغوية في الترجمة ومتطلبات الحلال للصادرات الغذائية البرازيلية إلى الأسواق العربية.
+          </p>
+          <div class="card-footer">
+            <span class="card-read-ar">اقرأ المقال</span>
+            <span class="card-arrow">←</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Artigo 6 -->
+      <a class="article-card" href="artigo-6.html">
+        <div class="card-top">
+          <span class="card-num">06</span>
+          <span class="card-tag tag-ar">عربي - Árabe</span>
+          <h3 class="card-title-ar">الذكاء الاصطناعي وترجمة العقود: أين يُخطئ الخوارزم</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-title-pt">IA na Tradução de Contratos - Onde o Algoritmo Erra</p>
+          <p class="card-excerpt-ar">
+            أين يخطئ الذكاء الاصطناعي وترجمة العقود: أين يُخطئ الخوارزم القانونية وكيف تنقذ المراجعة البشرية المتخصصة الصفقة.
+          </p>
+          <div class="card-footer">
+            <span class="card-read-ar">اقرأ المقال</span>
+            <span class="card-arrow">←</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <p class="cta-label">YallaConecta - Escritório Digital</p>
+      <h2 class="cta-title-ar">هل تحتاج إلى ترجمة قانونية معتمدة؟</h2>
+      <p class="cta-title-pt">Precisa de tradução juramentada árabe-português?</p>
+      <a href="https://yallaconecta.com" class="cta-btn">Visitar yallaconecta.github.io</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">يلّا كونيكتا - YallaConecta</span>
+      <div class="footer-links">
+        <a href="https://yallaconecta.com">Site Comercial</a>
+        <a href="https://yallaconecta.com">Portal de Artigos</a>
+        <a href="artigo-1.html">Diligências</a>
+        <a href="artigo-6.html">IA na tradução</a>
+      </div>
+      <span class="footer-copy">© 2025 YallaConecta - CNPJ 63.876.489/0001-80 - Curitiba | São Paulo | Itapoá | Joinville</span>
+    </div>
+  </footer>
+
+</body>
+</html>
